@@ -1,0 +1,42 @@
+@charset "UTF-8";
+	/* ------------main-menu--------------------------------------- */
+	.main-menu{
+		position: relative;
+		top: -45px;
+	}
+		
+		.main-menu ul{
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		.main-menu li,
+		.main-menu li a{
+			width: 45px;
+			height: 45px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+/* ------------.main--------------------------------------- */		
+.main{
+	top: 45px;
+	
+}
+
+.container-inner{
+	
+	
+}
+
+	.container-inner .input-box{
+		height: 38px;
+	}
+
+
+
+					
+
+					
+					

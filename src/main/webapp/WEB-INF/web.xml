@@ -31,9 +31,27 @@
   	<welcome-file>index.jsp</welcome-file>
   	<welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  
+   <listener>
+	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+        /WEB-INF/spring/service-context.xml
+        /WEB-INF/spring/security-context.xml
+     
+     </param-value>
+	</context-param>
+	
   <servlet>
      <servlet-name>dispatcher</servlet-name>
      <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	 <init-param>
+  	 	<param-name>contextConfigLocation</param-name>
+  	 	<param-value>/WEB-INF/spring/servlet-context.xml</param-value>
+  	 </init-param>
+  	 
   	 <!-- <init-param>
   	 	<param-name>path</param-name>
   	 	<param-value>/WEB-INF/mapper.properties</param-value>

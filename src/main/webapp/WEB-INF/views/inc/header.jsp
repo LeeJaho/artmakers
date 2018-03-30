@@ -9,7 +9,7 @@
 			<h1 class="hidden">메인메뉴</h1>
 				<ul>
 					<li><a href=""><img src ="${ctx}/resources/images/ic_dehaze_black_24dp_1x.png"/></a></li>
-					<li><a href=""><img src ="${ctx}/resources/images/onemakers_logo.png"/></a></li>
+					<li><a href=""><img src ="${ctx}/resources/images/daymakers_logo.png"/></a></li>
 					<li><a href=""><img src ="${ctx}/resources/images/ic_search_black_24dp_1x.png"/></a></li>
 				</ul>
 		</nav>
