@@ -25,18 +25,22 @@
 	
 }
 
-.container-inner{
+.container{
 	
 	
 }
 
-	.container-inner .input-box{
-		height: 38px;
+	.inner{
+		display: flex;
+		flex-direction: column;
 	}
-
-
-
-					
-
-					
-					
+	
+	.inner-login{
+		display:flex;
+		align-content: center;
+		justify-content: center;
+	}
+	.inner-login .input-box{
+		height: 38px;
+		
+	}

@@ -8,12 +8,20 @@
 	<main class="main">
 		
 		<section class="container">
-			<h1>로그인</h1>
-			<form>
-			<div class="container-inner">
-				<p><input class="input-box" type="text" name="id" placeholder="ID"/></p>
-				<p><input class="input-box" type="text" name="password" placeholder="Password"/></p>
+			<div class="inner">
+				<h1>로그인</h1>
+				<div class="inner-login">
+					<form method="post">
+					
+						<p><input class="input-box" type="text" name="id" placeholder="ID"/></p>
+						<p><input class="input-box" type="text" name="password" placeholder="Password"/></p>
+						<div class="login-button"><input name="login" type="submit" value="로그인"> </div>
+					</form>
+				</div>
+				
+				<div class="inner-regist">
+				 	회원가입창
+				</div>
 			</div>
-			</form>
 		</section>
 	</main>
