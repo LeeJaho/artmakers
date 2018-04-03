@@ -7,16 +7,20 @@
 
 	<main class="main">
 		<section class="note-list">
-			<h1 class="hidden">노트목록</h1>
-			<ul class="">
-				<c:forEach begin="0" end ="9">
-					<li>
-						<div>노트 제목</div>
-						<div>
-						</div>
-						<div><span>분류</span> <span>2018-03-22 15:23</span></div>
-					</li>
-				</c:forEach>
+			<h1 class="hidden">메인</h1>
+			<ul class="main-content">
+				
+					<c:forEach begin="0" end ="9">
+						<li>
+							
+								<div>Day7</div>
+								<div>
+									수제책상만들기
+								</div>
+						
+						</li>
+					</c:forEach>
+			
 			</ul>
 		</section>
 	</main>

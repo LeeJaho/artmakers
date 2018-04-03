@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6{
 	height: 45px;
 	width: 100%;
 	position: fixed;
+	top: 0px;
 	background: #ffffff;
 	border-bottom: 1px solid #666666;
 }
@@ -62,9 +63,13 @@ h1, h2, h3, h4, h5, h6{
 
 /* ------------.main--------------------------------------- */		
 .main{
-	top: 45px;
+	margin-top: 45px;
 	
 }
+
+	.main-content{
+		display: flex;
+	}
 /*모듈단위로 > > > > >구조 들어간다*/
 	.main .note-list{
 		font-size: 14px;
@@ -109,7 +114,17 @@ h1, h2, h3, h4, h5, h6{
 					
 /* ------------.footer--------------------------------------- */	
 .footer-table{
-	background: #4c96d7;
-	
+	background: #bcb8bc;
+	text-align: center;
 }
-					
+
+	.info-line{
+		line-height: 0px;
+	}
+		
+
+.content-box{	
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+}					
