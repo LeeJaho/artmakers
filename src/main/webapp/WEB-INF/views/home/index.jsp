@@ -8,19 +8,18 @@
 	<main class="main">
 		<section class="note-list">
 			<h1 class="hidden">메인</h1>
+			<div class="main-visual">visual</div>
 			<ul class="main-content">
-				
-					<c:forEach begin="0" end ="9">
-						<li>
-							
-								<div>Day7</div>
-								<div>
-									수제책상만들기
-								</div>
+				<c:forEach begin="0" end ="20">
+					<li>
 						
-						</li>
-					</c:forEach>
-			
+							<div class="main-item">Day7</div>
+							<div>
+								수제책상만들기
+							</div>
+					
+					</li>
+				</c:forEach>
 			</ul>
 		</section>
 	</main>

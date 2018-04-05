@@ -66,15 +66,29 @@ h1, h2, h3, h4, h5, h6{
 	margin-top: 45px;
 	
 }
-
+	.main-visual{
+		height: 90px;
+		width: 60%;
+		margin: 10px auto;
+		background: blue;
+	}
 	.main-content{
 		display: flex;
+		flex-wrap: wrap;
 	}
+	
+		.main-content > li{
+			width : 25%;
+			height: 80px;
+		}
+		
+		
 /*모듈단위로 > > > > >구조 들어간다*/
 	.main .note-list{
 		font-size: 14px;
 		line-height: 19px;
 		color: #595959;
+		margin: 0px auto;
 	}
 	
 		.main .note-list ul{
@@ -84,6 +98,8 @@ h1, h2, h3, h4, h5, h6{
 			.main .note-list li{
 				padding: 15px;
 				border-bottom: 1px solid #ddd;
+				margin:10px auto;
+				width: 20%;
 			}
 			
 			

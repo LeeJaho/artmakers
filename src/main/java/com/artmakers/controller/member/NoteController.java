@@ -1,21 +1,19 @@
-package com.artmakers.controller;
+package com.artmakers.controller.member;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
 
-@RequestMapping("/note/")
-@Controller
+@RequestMapping("/member/note/")
+@Controller("memberNoteController")
 public class NoteController {
 	
 	@RequestMapping("list")
 	public String list() {
 		
-		return "note.list";
+		return "member.note.list";
 	}
 	
 	@RequestMapping("detail")
@@ -24,7 +22,7 @@ public class NoteController {
 		//Note note = service.getNote(id);
 		
 		//model.addAttribute("note", note);
-		return "note.detail";
+		return "member.note.detail";
 	}
 
 }
