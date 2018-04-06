@@ -10,11 +10,11 @@
 			<h1 class="hidden">메인</h1>
 			<div class="main-visual">visual</div>
 			<ul class="main-content">
-				<c:forEach begin="0" end ="20">
+				<c:forEach begin="1" end ="12">
 					<li>
 						
-							<div class="main-item">Day7</div>
-							<div>
+							<div class="content-day">Day7</div>
+							<div class="content-name">
 								수제책상만들기
 							</div>
 					
