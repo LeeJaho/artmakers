@@ -8,6 +8,10 @@ body{
 
 	margin: 0px;
 	height: 100%;
+	margin:0px;
+	font-family: 맑은 고딕, 고딕, 돋움, Arial, sans-serif !important;
+	font-weight: bold !important;
+	color : #333333;
 }
 
 ul{
@@ -18,6 +22,10 @@ ul{
 
 h1, h2, h3, h4, h5, h6{
 	margin: 0px;
+}
+
+a{
+	text-decoration: none;
 }
 
 /* ----------my style cascade------------- */
@@ -60,7 +68,16 @@ h1, h2, h3, h4, h5, h6{
 			justify-content: center;
 			align-items: center;
 		}
-
+/* ------------.main-visual--------------------------------------- */		
+.main-visual{
+	
+}
+	.main-visual img{
+		max-width: 100%;
+		max-height: 100%;
+		margin:auto;
+		display: block;
+	}
 /* ------------.main--------------------------------------- */		
 .main{
 	margin-top: 45px;
@@ -72,32 +89,67 @@ h1, h2, h3, h4, h5, h6{
 		background: blue;
 		
 	}
+				
+	.top-main-wrapper{
+		display: flex;
+		justify-content: center;
+	}
+				
+	.main-wrapper{
+					width:100%
+				}
+				
 	.main-content{
-		/* display: flex;
-		flex-wrap: wrap; */
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-auto-rows: 200px;
-		align-items: space-around;
+		grid-auto-rows: minmax(200px, auto);
+		
 	}
 	
+		.main-content > .content-box{
+			display: grid;
+			grid-template-row: 1fr 1fr;
+		}
 		.main-content > li > .content-day{
-			
-			/* width: 25%;
-			margin-top: 20px;
-			margin-left:10px; */
-			background: red;
+			margin:10px;
+			height: 40%;
+			/* background: red; */
 		}
 		
 		.main-content > li > .content-name{
-			
-			background: grey;
-			/* margin-top: 50px;
-			
-			width: 90%; */
+			margin:10px;
+			height: 40%;
+			justify-content: center;
+			align-items: center;
+			/* background: grey; */
 		}
-		
-		
+/*Media 구조*/
+@media screen and (min-width: 600px) and (max-width: 1200px){
+		      .main-content{
+					display: grid;
+					grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+					grid-auto-rows: minmax(200px, auto);
+					
+				}
+				
+				.main-wrapper{
+					
+					width:80%
+				}
+				
+				.top-main-wrapper{
+					display: flex;
+					justify-content: center;
+				}
+            }
+/*  @media screen and (min-width: 980px) and (max-width: 1020px) {
+                .main { background-color: green; }
+                h1 { color: red; }
+            }
+@media screen and (min-width: 801px) {
+                .main { background-color: blue; }
+                h1 { color: yellow; }
+            } */
 /*모듈단위로 > > > > >구조 들어간다*/
 	.main .note-list{
 		/* font-size: 14px;
@@ -148,21 +200,30 @@ h1, h2, h3, h4, h5, h6{
 					}
 					
 /* ------------.footer--------------------------------------- */	
-.footer-table{
+.footer{
+	display: flex;
+	justify-content: center;
 	background: #bcb8bc;
+	
+}
+.footer-table{
 	text-align: center;
 }
 
 	.info-line{
 		line-height: 0px;
 	}
-		
-
-.content-box{	
-	display: flex;
-	width: 90%;
-	justify-content: space-between;
-}
+	
+	.sns-link{
+		display: flex;
+		justify-content: space-around;
+	}
+	
+		.sns-link img{
+			height: 25px;
+			width: 25px;
+		}
+	
 
 /* ------------.aside--------------------------------------- */	
 .aside{
