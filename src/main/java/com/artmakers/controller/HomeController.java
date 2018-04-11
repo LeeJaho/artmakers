@@ -20,6 +20,11 @@ public class HomeController {
 		
 		return "home.login";
 	}
-
+	
+	@RequestMapping(value="join", method=RequestMethod.GET)
+	public String join() {
+		
+		return "home.join";
+	}
 
 }

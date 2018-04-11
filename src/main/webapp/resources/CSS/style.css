@@ -49,6 +49,11 @@ a{
 		align-items: center;
 			
 	}
+	
+	.main-menu li:nth-child(2){
+		margin-right:auto;
+		margin-left:auto;
+	}
 	/* ------------main-menu--------------------------------------- */
 	.main-menu{
 		position: relative;
@@ -73,8 +78,9 @@ a{
 	
 }
 	.main-visual img{
-		max-width: 100%;
+		
 		max-height: 100%;
+		max-width: 100%;
 		margin:auto;
 		display: block;
 	}
@@ -84,9 +90,9 @@ a{
 	
 }
 	.main-visual{
-		height: 200px;
+		
 		width: 100%;
-		background: blue;
+		
 		
 	}
 				
@@ -107,8 +113,8 @@ a{
 	}
 	
 		.main-content > .content-box{
-			display: grid;
-			grid-template-row: 1fr 1fr;
+			/* display: grid;
+			grid-template-row: 1fr 1fr; */
 		}
 		.main-content > li > .content-day{
 			margin:10px;
@@ -124,7 +130,7 @@ a{
 			/* background: grey; */
 		}
 /*Media 구조*/
-@media screen and (min-width: 600px) and (max-width: 1200px){
+/* @media screen and (min-width: 600px) and (max-width: 1200px){
 		      .main-content{
 					display: grid;
 					grid-template-columns: repeat(auto-fill, minmax(200px, auto));
@@ -141,7 +147,7 @@ a{
 					display: flex;
 					justify-content: center;
 				}
-            }
+            } */
 /*  @media screen and (min-width: 980px) and (max-width: 1020px) {
                 .main { background-color: green; }
                 h1 { color: red; }
@@ -152,10 +158,10 @@ a{
             } */
 /*모듈단위로 > > > > >구조 들어간다*/
 	.main .note-list{
-		/* font-size: 14px;
+		font-size: 14px;
 		line-height: 19px;
 		color: #595959;
-		margin: 0px auto; */
+		margin: 0px auto;
 	}
 	
 		.main .note-list ul{
@@ -210,44 +216,102 @@ a{
 	text-align: center;
 }
 
-	.info-line{
-		line-height: 0px;
+	.info-wrap{
+		display: flex;
+		
 	}
+		.info-wrap .info-line{
+			line-height: 10px;
+			margin: 10px;
+		}
+	
+			.info-wrap .info-line img{
+				padding-top: 10px;
+				max-height: 100%
+			}
 	
 	.sns-link{
+		padding-bottom: 20px;
 		display: flex;
 		justify-content: space-around;
+		width: 80%;
+		margin: auto;
 	}
 	
 		.sns-link img{
-			height: 25px;
-			width: 25px;
+			height: 30px;
+			width: 30px;
 		}
+		
+	
+	
+	
+	
 	
 
 /* ------------.aside--------------------------------------- */	
 .aside{
 	width: 80%;
-	height: calc(100% - 46px);
-	background: #808080;
+	/* height: 600px; */
+	background: #ffffff;
 	position: fixed;
-	top: 46px;
-	left: -80%;
+	/* top: 46px; */
+	top: -120%;
 	
 	transition: 1s;
-
+	font-size: 18px;
 }
 
 .aside.show{
-	left: 0%;
+	top: calc(46px - 0%);
 	box-shadow: 5px 5px 30px #797979;
 }
 
-	.aside-box .log-box{
+.aside-box{
+	text-align: center;
+}
+	.login-wrap .login-box{
 		display: flex;
 		justify-content: space-around;
 	}
 	
-		.aside-box .log-box div{
-			border: 1px solid black;
-		}						
+
+	.profile-wrap{
+		height: 230px;
+		/* background: #797979; */
+		display: flex;
+		flex-direction: column;
+		/* margin: auto; */
+		align-items: center;
+		justify-content: center;
+	}	
+	
+		.profile-wrap .profile-pic{
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				/* background: blue; */
+				border: 1px solid black;
+				
+			}
+			
+		
+		.profile-wrap .profile-name{
+				margin-top: 10px;
+				width: 150px;
+				height: 40px;
+				
+			}
+			
+			
+	.aside-button{
+		border: 1px solid #bdbdbd;
+		margin-bottom: 5px;
+		height: 70px;
+	}		
+		
+		
+		
+		
+		
+		

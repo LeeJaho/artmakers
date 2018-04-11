@@ -16,10 +16,10 @@
 	 			</p>
 	 	</div>
 	 	<div class="footer-company">
-	 		<p>
-	 			<div><span class="info-line"><img src ="${ctx}/resources/images/phone_icon.png"/>010 - 3358 - 8497</span></div>
-	 			<div><span class="info-line"><img src ="${ctx}/resources/images/mail_icon.png"/>daymakers@gmail.com</span></div>	
-	 		</p>
+	 		<div class="info-wrap">
+	 			<div class="info-line"><img src ="${ctx}/resources/images/phone_icon.png"/><p>010 - 3358 - 8497</p></div>
+	 			<div class="info-line"><img src ="${ctx}/resources/images/mail_icon.png"/><p>daymakers@gmail.com</p></div>	
+	 		</div>
 	 		
 	 		<ul class="sns-link">
 	 			<li><img src ="${ctx}/resources/images/kakaotalk.png"/></li>
