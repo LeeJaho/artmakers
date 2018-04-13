@@ -9,7 +9,7 @@
 			<h1 class="hidden">메인메뉴</h1>
 				<ul>
 					<li id="ham-button"><a href=""><img id="hamburg" src ="${root}/resources/images/downbutton.png"/></a></li>
-					<li><a href=""><img src ="${root}/resources/images/daymakers_logo.png"/></a></li>
+					<li><a href="${root}/home/index"><img src ="${root}/resources/images/daymakers_logo.png"/></a></li>
 					<%-- <li><a href=""><img src ="${root}/resources/images/login_icon.png"/></a></li> --%>
 					<li><a href=""><img src ="${root}/resources/images/search_icon.png"/></a></li>
 				</ul>

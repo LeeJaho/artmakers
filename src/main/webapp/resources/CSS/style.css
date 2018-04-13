@@ -24,7 +24,9 @@ h1, h2, h3, h4, h5, h6{
 	margin: 0px;
 }
 
-a{
+a,
+a:active{
+	color: #000;
 	text-decoration: none;
 }
 
@@ -75,7 +77,8 @@ a{
 		}
 /* ------------.main-visual--------------------------------------- */		
 .main-visual{
-	
+	display:inline-block;
+	position: relative;
 }
 	.main-visual img{
 		
@@ -83,18 +86,25 @@ a{
 		max-width: 100%;
 		margin:auto;
 		display: block;
+		 vertical-align: bottom;
 	}
+	
+		.visual-info{
+		top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+			position: absolute;
+		}
 /* ------------.main--------------------------------------- */		
 .main{
 	margin-top: 45px;
 	
 }
-	.main-visual{
+	
+	
+	
 		
-		width: 100%;
-		
-		
-	}
 				
 	.top-main-wrapper{
 		display: flex;
@@ -112,22 +122,22 @@ a{
 		
 	}
 	
-		.main-content > .content-box{
-			/* display: grid;
-			grid-template-row: 1fr 1fr; */
+		.content-box{
+			
+			height: 90%;
 		}
-		.main-content > li > .content-day{
+		.content-day{
 			margin:10px;
 			height: 40%;
 			/* background: red; */
 		}
 		
-		.main-content > li > .content-name{
+		.content-name{
 			margin:10px;
 			height: 40%;
 			justify-content: center;
 			align-items: center;
-			/* background: grey; */
+			
 		}
 /*Media 구조*/
 /* @media screen and (min-width: 600px) and (max-width: 1200px){
@@ -257,7 +267,7 @@ a{
 	position: fixed;
 	/* top: 46px; */
 	top: -120%;
-	
+	z-index: 5;
 	transition: 1s;
 	font-size: 18px;
 }

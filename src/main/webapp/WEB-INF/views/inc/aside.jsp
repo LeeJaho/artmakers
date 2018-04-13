@@ -36,14 +36,14 @@
 		<div class="login-wrap">
 			<div class="aside-button login-box">
 				<div>
-					<a href="${root}/member/login">로그인</a>
+					<a href="${root}/home/login">로그인</a>
 				</div>
 				<div class="hidden">
 					<a href="${root}/logout">로그아웃</a>
 				</div>
 	
 				<div>
-					<a href="${root}/member/join">회원가입</a>
+					<a href="${root}/home/join">회원가입</a>
 				</div>
 			</div>
 	
