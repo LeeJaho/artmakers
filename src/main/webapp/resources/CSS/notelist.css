@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.note-content-box{
+	position: relative;
+	margin-top: 5px;
+	height: 80%;
+	display: flex;
+	justify-content: space-between;
+}
+
+	.note-list-inner{
+		width: 60%;
+	}
+	
+	.note-list-img{
+		width: 110px;
+		height: 110px;
+	}
+	
+		.note-list-img > img{
+			height: 110px;
+			width: 110px;
+		}

@@ -42,6 +42,7 @@ a:active{
 	top: 0px;
 	background: #ffffff;
 	border-bottom: 1px solid #666666;
+	z-index: 50;
 }
 	.header > h1{
 		font-size: 14px;
@@ -77,8 +78,8 @@ a:active{
 		}
 /* ------------.main-visual--------------------------------------- */		
 .main-visual{
-	display:inline-block;
-	position: relative;
+	margin-top: 10px;
+	margin-left: 20px;
 }
 	.main-visual img{
 		
@@ -90,15 +91,11 @@ a:active{
 	}
 	
 		.visual-info{
-		top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-			position: absolute;
+		
 		}
 /* ------------.main--------------------------------------- */		
 .main{
-	margin-top: 45px;
+	margin-top: 55px;
 	
 }
 	
@@ -117,28 +114,85 @@ a:active{
 				
 	.main-content{
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-auto-rows: minmax(200px, auto);
-		
+		grid-template-columns: 1fr;
+		grid-auto-rows: minmax(300px, auto);
+		overflow: hidden;
 	}
 	
 		.content-box{
+			position: relative;
+			height: 99%;
 			
-			height: 90%;
+			
 		}
+		
+		.index-box{
+			
+		}
+		
+			.content-inner-box{
+				
+			}
+		
+		
+		.content-img{
+
+			overflow: hidden;
+			display: block;
+			
+		}
+		
+		.content-img img{
+			max-height: 100%;
+			max-width: 100%;
+			position: absolute;
+			top:0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			margin: 0 auto;
+			opacity: 0.9;
+			
+		}
+		
+		.content-info{
+			position: absolute;
+			top: 40%;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow: hidden;
+			height: 130px;
+			width: 70%;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+			background: rgba(0,0,0,0.1);
+			margin : 0 auto;
+		}
+		
+		
+		
 		.content-day{
 			margin:10px;
 			height: 40%;
 			/* background: red; */
+			/* background: url(/images/day_line.png) 0 bottom no-repeat; */
 		}
 		
+		
+			
 		.content-name{
 			margin:10px;
 			height: 40%;
 			justify-content: center;
-			align-items: center;
-			
+			align-self: center;
 		}
+		
+		
 /*Media 구조*/
 /* @media screen and (min-width: 600px) and (max-width: 1200px){
 		      .main-content{
@@ -157,8 +211,8 @@ a:active{
 					display: flex;
 					justify-content: center;
 				}
-            } */
-/*  @media screen and (min-width: 980px) and (max-width: 1020px) {
+            }
+ @media screen and (min-width: 980px) and (max-width: 1020px) {
                 .main { background-color: green; }
                 h1 { color: red; }
             }
@@ -185,7 +239,7 @@ a:active{
 				width: 30%;
 				height: 30%; */
 				margin: 5px;
-				border: 1px solid #797979;
+				border-bottom: 1px solid #797979;
 				
 			}
 			
@@ -217,6 +271,7 @@ a:active{
 					
 /* ------------.footer--------------------------------------- */	
 .footer{
+	margin-top: 20px;
 	display: flex;
 	justify-content: center;
 	background: #bcb8bc;
