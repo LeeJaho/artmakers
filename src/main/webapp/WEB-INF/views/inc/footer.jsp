@@ -17,7 +17,7 @@
 	 	</div>
 	 	<div class="footer-company">
 	 		<div class="info-wrap">
-	 			<div class="info-line"><img src ="${ctx}/resources/images/phone_icon.png"/><p>010 - 3358 - 8497</p></div>
+	 			<div class="info-line"><img src ="${ctx}/resources/images/phone_icon.png"/><p>010-3358-8497</p></div>
 	 			<div class="info-line"><img src ="${ctx}/resources/images/mail_icon.png"/><p>daymakers@gmail.com</p></div>	
 	 		</div>
 	 		

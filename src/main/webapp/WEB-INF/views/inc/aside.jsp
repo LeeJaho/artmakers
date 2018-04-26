@@ -16,21 +16,29 @@
 				트깔
 			</div>
 		</div>
+		<a href="">
+			<div class="aside-button home-wrap">
+				데이메이커스 홈
+			</div>
+		</a>
 		
-		<div class="aside-button home-wrap">
-			데이메이커스 홈
-		</div>
-		<div class="aside-button feed-wrap">
-			피드
-		</div>
-		<div class="aside-button myday-wrap">
-			내 Day
-		</div>
+		<a href="">
+			<div class="aside-button feed-wrap">
+				피드
+			</div>
+		</a>
 		
-		<div class="aside-button mycollection-wrap">
-			내 collection
-		</div>
+		<a href="${root}/member/collection/myday">
+			<div class="aside-button myday-wrap">
+				내 Day
+			</div>
+		</a>
 		
+		<a href="">
+			<div class="aside-button mycollection-wrap">
+				내 collection
+			</div>
+		</a>
 		
 		
 		<div class="login-wrap">

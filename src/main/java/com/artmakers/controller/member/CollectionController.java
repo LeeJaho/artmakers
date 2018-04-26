@@ -16,13 +16,13 @@ public class CollectionController {
 		return "member.collection.myday";
 	}
 	
-	@RequestMapping("mylike")
-	public String mylike() {
+	@RequestMapping("mymaked")
+	public String mymaked() {
 		
 		//Note note = service.getNote(id);
 		
 		//model.addAttribute("note", note);
-		return "member.collection.mylike";
+		return "member.collection.mymaked";
 	}
 
 }

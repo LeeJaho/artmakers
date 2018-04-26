@@ -4,13 +4,11 @@
 <!-- 절대경로를 쓰기 위해서 -> 왜 절대경로를 써? -->
 <c:set var="root" value="${pageContext.request.contextPath }" />
 	<header class="header">
-		<h1 class="hidden"></h1>
 		<nav class="main-menu">
-			<h1 class="hidden">메인메뉴</h1>
 				<ul>
 					<li id="ham-button"><a href=""><img id="hamburg" src ="${root}/resources/images/downbutton.png"/></a></li>
 					<li><a href="${root}/home/index"><img src ="${root}/resources/images/daymakers-logo.png"/></a></li>
-					<li><a href=""><img src ="${root}/resources/images/write-icon.png"/></a></li>
+					<li><a href="${root}/member/daywrite"><img src ="${root}/resources/images/write-icon.png"/></a></li>
 					<li><a href=""><img src ="${root}/resources/images/search_icon.png"/></a></li>
 				</ul>
 		</nav>

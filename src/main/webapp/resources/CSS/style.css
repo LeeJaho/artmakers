@@ -42,7 +42,7 @@ a:active{
 	top: 0px;
 	background: #ffffff;
 	border-bottom: 1px solid #666666;
-	z-index: 50;
+	z-index: 600;
 }
 	.header > h1{
 		font-size: 14px;
@@ -60,7 +60,7 @@ a:active{
 	/* ------------main-menu--------------------------------------- */
 	.main-menu{
 		position: relative;
-		top: -45px;
+		/* top: -45px; */
 	}
 		
 		.main-menu ul{
@@ -78,8 +78,7 @@ a:active{
 		}
 /* ------------.main-visual--------------------------------------- */		
 .main-visual{
-	margin-top: 10px;
-	margin-left: 20px;
+	margin: 10px 20px;
 }
 	.main-visual img{
 		
@@ -98,25 +97,15 @@ a:active{
 	margin-top: 55px;
 	
 }
-	
-	
-	
-		
-				
-	.top-main-wrapper{
-		display: flex;
-		justify-content: center;
-	}
+
 				
 	.main-wrapper{
 					width:100%
 				}
 				
 	.main-content{
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-auto-rows: minmax(300px, auto);
-		overflow: hidden;
+		display: flex;
+		flex-direction: column;
 	}
 	
 		.content-box{
@@ -126,72 +115,37 @@ a:active{
 			
 		}
 		
-		.index-box{
-			
-		}
-		
-			.content-inner-box{
-				
-			}
-		
-		
 		.content-img{
-
+			min-height: 200px;
+			max-height: 250px;
 			overflow: hidden;
-			display: block;
-			
-		}
-		
-		.content-img img{
-			max-height: 100%;
-			max-width: 100%;
-			position: absolute;
-			top:0;
-			bottom: 0;
-			left: 0;
-			right: 0;
+			display: flex;
+			justify-content: center;
 			width: 100%;
-			margin: 0 auto;
-			opacity: 0.9;
-			
+			height: 100%;
 		}
 		
+			.content-img img{
+				width: 100%;
+				/* height: 100%;		 */		
+			}
 		.content-info{
 			position: absolute;
-			top: 40%;
+			top: 0;
 			bottom: 0;
 			left: 0;
 			right: 0;
 			overflow: hidden;
-			height: 130px;
-			width: 70%;
+			height: 99%;
+			width: 100%;
 			color: white;
-			display: flex;
+			display:flex;
 			flex-direction: column;
-			justify-content: center;
-			text-align: center;
-			background: rgba(0,0,0,0.1);
-			margin : 0 auto;
+			align-items: center;
+			background: rgba(0,0,0,0.2);
 		}
-		
-		
-		
-		.content-day{
-			margin:10px;
-			height: 40%;
-			/* background: red; */
-			/* background: url(/images/day_line.png) 0 bottom no-repeat; */
-		}
-		
 		
 			
-		.content-name{
-			margin:10px;
-			height: 40%;
-			justify-content: center;
-			align-self: center;
-		}
-		
 		
 /*Media 구조*/
 /* @media screen and (min-width: 600px) and (max-width: 1200px){
@@ -239,28 +193,34 @@ a:active{
 				width: 30%;
 				height: 30%; */
 				margin: 5px;
-				border-bottom: 1px solid #797979;
+				/* border-bottom: 1px solid #c6c6c6; */
 				
 			}
 			
 			
 				.note-list li > div:first-child{
-					font-size: 17px;
-					line-height: 21px;
+					font-size: 18px;
+					line-height: 22px;
 					color: #000000;
 					margin-bottom: 5px;		
 				}
 				
 				
 				.note-list li > div:last-child{
-					font-size: 13px;
+					font-size: 14px;
 					display: flex;
-					justify-content: space-between;
+					justify-content: center;
+
+				}
+				
+					.note-list li > div:last-child > h2{
+					
+					margin-bottom: 20px;
 				}
 				
 
 				.note-list li > div:not(:first-child){
-					margin-top: 5px;
+					/* margin-top: 5px; */
 				}
 				
 					
@@ -322,7 +282,7 @@ a:active{
 	position: fixed;
 	/* top: 46px; */
 	top: -120%;
-	z-index: 5;
+	z-index: 600;
 	transition: 1s;
 	font-size: 18px;
 }
@@ -342,18 +302,19 @@ a:active{
 	
 
 	.profile-wrap{
-		height: 230px;
+		height: 180px;
 		/* background: #797979; */
 		display: flex;
 		flex-direction: column;
 		/* margin: auto; */
 		align-items: center;
 		justify-content: center;
+		padding-top: 10px;
 	}	
 	
 		.profile-wrap .profile-pic{
-				height: 150px;
-				width: 150px;
+				height: 120px;
+				width: 120px;
 				border-radius: 50%;
 				/* background: blue; */
 				border: 1px solid black;
@@ -372,10 +333,51 @@ a:active{
 	.aside-button{
 		border: 1px solid #bdbdbd;
 		margin-bottom: 5px;
-		height: 70px;
+		height: 55px;
 	}		
-		
-		
+	
+	
+/*-------------summer note -----------------*/
+.write-content-wrapper{
+	display: flex;
+	justify-content: center;
+}
+	.title-write-box{
+		width: 95%;
+		margin: auto;
+		height: 40px;
+		border-radius: 1px;
+	}
+	
+	.submit-button{
+		height: 46px;
+		width: 90%;
+		background: black;
+		color: white;
+	}
+
+
+/*scroll bar*/
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment
+	{
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: url() rgba(0, 0, 0, .05);
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, .05);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, .1);
+}		
 		
 		
 		
