@@ -16,13 +16,13 @@
 				트깔
 			</div>
 		</div>
-		<a href="">
+		<a href="${root}/home/index">
 			<div class="aside-button home-wrap">
 				데이메이커스 홈
 			</div>
 		</a>
 		
-		<a href="">
+		<a href="${root}/member/note/list">
 			<div class="aside-button feed-wrap">
 				피드
 			</div>

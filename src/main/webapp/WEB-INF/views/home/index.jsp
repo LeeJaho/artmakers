@@ -29,24 +29,27 @@
 		<div class="main-wrapper">
 			<ul class="main-content">
 				<%-- <c:forEach begin="1" end="12"> --%>
+				<a href="#">
 				<li class="content-box">
 					<div class="content-img">
 						<img src="${root}/resources/images/exer.png" />
 						
 					</div>
-	
+					
 					<div class="content-info">
-	
+						
 						<h2 class="content-day">
 							Day30<img src="${root}/resources/images/day_line.png" />
 						</h2>
 	
 	
 						<h2 class="content-name">" 맨몸 운동 30일 기록 "</h2>
-	
+					
 					</div>
 				</li>
-	
+				</a>
+				
+				<a href="#">
 				<li class="content-box index-box">
 					<div class="content-img">
 						<img src="${root}/resources/images/furniture.png" />
@@ -63,7 +66,10 @@
 						<h2 class="content-name">" 수제책상 만들기 "</h2>
 					</div>
 				</li>
-	
+				</a>
+				
+				
+				<a href="#">
 				<li class="content-box index-box">
 					<div class="content-img">
 						<img src="${root}/resources/images/puppy-main.png" />
@@ -81,7 +87,10 @@
 	
 					</div>
 				</li>
-	
+				</a>
+				
+				
+				<a href="#">
 				<li class="content-box index-box">
 					<div class="content-img">
 					<img src="${root}/resources/images/bike.png" />
@@ -99,6 +108,7 @@
 	
 					</div>
 				</li>
+				</a>
 				<%-- <%-- </c:forEach> --%>
 			</ul>
 		</div>

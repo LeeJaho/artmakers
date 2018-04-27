@@ -9,21 +9,88 @@
 		<section class="note-list">
 			<h1 class="hidden">노트목록</h1>
 			<ul class="">
-				<c:forEach begin="0" end ="9">
-					<li>
-						<div class="note-content-box">
-							<div class="note-list-inner">
-								<span>DAY 30</span>
-								<div>운동 DAY30 변화</div>
-								<div>
-								  운동은 나에게 너무나 어려운것~! 허나 	
-								</div>
-							</div>
-							<div class="note-list-img"><img src="${root}/resources/images/puppy.png" /></div>
+			<%-- 	<c:forEach begin="0" end ="9"> --%>
+					<li class="note-content-box">
+						<div class="note-list-left">
+							<a href="${root}/note/detail">
+								<span class="note-list-title">맨손 운동으로 인한 변화</span>
+								<p class="note-list-content">
+								  아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1
+								  아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1
+								</p>
+							</a>	
+							<div class="note-list-info"><span>2018-03-22 15:23</span></div>
 						</div>
-						<div><span>분류</span> <span>2018-03-22 15:23</span></div>
+						<div class="note-list-img">
+						<a href="#">
+							<img src="${root}/resources/images/puppy.png" />
+						</a>
+						</div>
 					</li>
-				</c:forEach>
+					
+					<li class="note-content-box">
+						<div class="note-list-left">
+							<a href="#">
+								<span class="note-list-title">맨손 운동으로 인한 변화</span>
+								<p class="note-list-content">
+								  아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1
+								  아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1
+								</p>
+							</a>	
+							<div class="note-list-info"><span>2018-03-22 15:23</span></div>
+						</div>
+						<div class="note-list-img">
+						<a href="#">
+							<img src="${root}/resources/images/puppy.png" />
+						</a>
+						</div>
+					</li>
+					
+					<li class="note-content-box">
+						<div class="note-list-left">
+							<a href="#">
+								<span class="note-list-title">맨손 운동으로 인한 변화</span>
+								<p class="note-list-content">
+								  아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1
+								  아무 생각없이 운동을 하곤 했지만 제대로 운동
+								  해보자는 생각으로 시작했습니다. 별 것도 없지만
+								  그냥 맨 손 하나만 믿고 시작한 변화 기록합니다.
+								  DAY1
+								</p>
+							</a>	
+							<div class="note-list-info"><span>2018-03-22 15:23</span></div>
+						</div>
+						<div class="note-list-img">
+						<a href="#">
+							<img src="${root}/resources/images/puppy.png" />
+						</a>
+						</div>
+					</li>
+				<%-- </c:forEach> --%>
 			</ul>
 		</section>
 	</main>

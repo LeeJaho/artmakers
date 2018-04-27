@@ -120,6 +120,7 @@ a:active{
 			max-height: 250px;
 			overflow: hidden;
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			width: 100%;
 			height: 100%;
@@ -211,9 +212,9 @@ a:active{
 					display: flex;
 					justify-content: center;
 
-				}
+				}	
 				
-					.note-list li > div:last-child > h2{
+					.note-list li > div:last-child h2{
 					
 					margin-bottom: 20px;
 				}
@@ -224,7 +225,7 @@ a:active{
 				}
 				
 					
-					.note-list li > div > span:first-child{
+					.note-list li > div > a > span:first-child{
 						color: #6bacca;
 						
 					}
