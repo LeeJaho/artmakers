@@ -1,6 +1,7 @@
 package com.artmakers.controller.member;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -16,13 +17,14 @@ public class CollectionController {
 		return "member.collection.myday";
 	}
 	
-	@RequestMapping("mymaked")
-	public String mymaked() {
+	@GetMapping("mylike")
+	public String mylike() {
 		
 		//Note note = service.getNote(id);
 		
 		//model.addAttribute("note", note);
-		return "member.collection.mymaked";
+		return "member.collection.mylike";
 	}
+
 
 }

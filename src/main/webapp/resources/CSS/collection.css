@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("style.css");
 
 /*---------collection info ----------*/
 .collection-info{
@@ -18,7 +19,7 @@
 			width: 50px;
 			height: 50px;
 		}
-		
+
 /*---------collection nav ----------*/
 .collection-nav{
 	display: flex;

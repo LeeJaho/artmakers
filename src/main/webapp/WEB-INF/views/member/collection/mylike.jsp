@@ -12,7 +12,7 @@
 								<img src="${root}/resources/images/exer.png" />
 								<div class="collection-box-info">
 									<span class="collection-box-name">
-										2018년 약속 운동
+										2018년 약속 운동!!!!!!!!!!!!!!!
 									</span>
 								</div>
 							</a>

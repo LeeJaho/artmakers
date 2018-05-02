@@ -7,8 +7,8 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	$(function(){
-		var collectionButton = $(".collection-nav div");
-		
+		var collectionButton = $(".collection-nav");
+		var contentBox = $(".collection-myday-content");
 		collectionButton.click(function(e){
 			if(e.target === e.currentTarget)
 				return;
@@ -16,12 +16,36 @@
 			var target = e.target;
 			if(target.noteName == "A"){
 				target = target.parentNode;
+				//alert(target);
 			}
 			
 			var viewName = target.dataset.viewName;
-			
+			//alert(viewName);
 			var view = $("."+viewName);
-			view.css("border", "1px solid red");
+			
+			//alert(view);
+			//view.css("border", "1px solid red");
+			
+			if(view.length == 0){
+         		var ajaxIcon = $("<img />")
+			                    .attr("src", "${root}/resources/images/ajax-loader.gif")
+			                    .appendTo(contentBox);
+         		
+         		$.get("mylike", function(data){
+             		var html = contentBox.html();
+         			//alert(data);
+         			contentBox.html(html+data);
+         		
+         			ajaxIcon.remove();
+         		
+         		});
+         		
+         		
+         	}
+			
+			contentBox.addClass("hidden");
+			e.preventDefault(); 
+			view.removeClass("hidden");
 		});
 	});
 </script>
