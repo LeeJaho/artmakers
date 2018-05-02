@@ -4,7 +4,27 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="root" value="${pageContext.request.contextPath }" />
 <link href = "${root}/resources/CSS/collection.css" type="text/css" rel="stylesheet"/>
-
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		var collectionButton = $(".collection-nav div");
+		
+		collectionButton.click(function(e){
+			if(e.target === e.currentTarget)
+				return;
+			
+			var target = e.target;
+			if(target.noteName == "A"){
+				target = target.parentNode;
+			}
+			
+			var viewName = target.dataset.viewName;
+			
+			var view = $("."+viewName);
+			view.css("border", "1px solid red");
+		});
+	});
+</script>
 	<article class="main">
 			<div class="collection-info">
 				<div class="collection-header">
@@ -19,12 +39,12 @@
 			</div>
 			
 			<nav class="collection-nav">
-				<div class="collection-nav-daymaking">
+				<div class="collection-nav-daymaking" data-view-name="collection-myday-content">
 					<a href="">MAKING DAY</a>
 				</div>
 				
-				<div class="collection-nav-makedday">
-					<a href="">MAKED DAY</a>
+				<div class="collection-nav-makedday" data-view-name="collection-mylike-content" >
+					<a href="">LIKED DAY</a>
 				</div>
 			</nav>
 			
@@ -36,7 +56,7 @@
 					<div class="collection-sort"><span>등록순</span> <span>DAY일 순</span></div>
 				</div>
 				
-				<div class="collection-main-content">
+				<div class="collection-myday-content">
 					<c:forEach begin="0" end ="9">
 						<div class="collection-box">
 							<a href="">

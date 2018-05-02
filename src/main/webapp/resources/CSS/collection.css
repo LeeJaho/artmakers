@@ -67,7 +67,7 @@
 		}
 	
 /*---------collection main content ----------*/	
-.collection-main-content{
+.collection-myday-content{
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
@@ -75,8 +75,17 @@
 	align-items: center;
 }
 
+.collection-mylike-content{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+
 	.collection-box{
-		width:40%;
+		width: 120px;
 		/* height: 40%; */
 		margin: 8px;
 		border: 1px solid #c6c6c6;
