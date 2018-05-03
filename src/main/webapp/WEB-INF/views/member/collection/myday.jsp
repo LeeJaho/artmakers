@@ -8,50 +8,47 @@
 <script>
 	$(function(){
 		var collectionButton = $(".collection-nav");
-		var contentBox = $(".collection-myday-content");
+		var testBox = $(".test");
 		collectionButton.click(function(e){
 			if(e.target === e.currentTarget)
 				return;
 			
 			var target = e.target;
-			if(target.noteName == "A"){
+			if(target.nodeName == "A"){
 				target = target.parentNode;
 				//alert(target);
+				e.preventDefault(); 
+				
 			}
-			
 			var viewName = target.dataset.viewName;
 			//alert(viewName);
-			var view = $("."+viewName);
 			
+			var view = $("."+viewName);
 			//alert(view);
 			//view.css("border", "1px solid red");
 			
 			if(view.length == 0){
-         		var ajaxIcon = $("<img />")
-			                    .attr("src", "${root}/resources/images/ajax-loader.gif")
-			                    .appendTo(contentBox);
          		
-         		$.get("mylike", function(data){
-             		var html = contentBox.html();
-         			//alert(data);
-         			contentBox.html(html+data);
-         		
-         			ajaxIcon.remove();
-         		
+         		$.get(viewName+"-partial", function(data){
+             		var html = testBox.html();
+             		
+         			testBox.html(html+data);
+					view = testBox.find("."+viewName);
          		});
          		
          		
          	}
 			
-			contentBox.addClass("hidden");
-			e.preventDefault(); 
+			testBox.children("div").addClass("hidden");
+			
 			view.removeClass("hidden");
+			
 		});
 	});
 </script>
 	<article class="main">
 			<div class="collection-info">
-				<div class="collection-header">
+				<div class="collection-header"> 
 					<span class="collection-header-nick">트깔</span>
 					<span class="collection-header-id">jaho45245</span>
 					<p class="collection-header-intro">"제발 운동을 하고자 DAYMAKERS를 시작합니다"</p>
@@ -63,11 +60,11 @@
 			</div>
 			
 			<nav class="collection-nav">
-				<div class="collection-nav-daymaking" data-view-name="collection-myday-content">
+				<div class="collection-nav-daymaking" data-view-name="myday">
 					<a href="">MAKING DAY</a>
 				</div>
 				
-				<div class="collection-nav-makedday" data-view-name="collection-mylike-content" >
+				<div class="collection-nav-makedday" data-view-name="mylike" >
 					<a href="">LIKED DAY</a>
 				</div>
 			</nav>
@@ -80,20 +77,21 @@
 					<div class="collection-sort"><span>등록순</span> <span>DAY일 순</span></div>
 				</div>
 				
-				<div class="collection-myday-content">
-					<c:forEach begin="0" end ="9">
+			</section>
+			
+			<div class="test">
+				<div class="myday">
 						<div class="collection-box">
 							<a href="">
 								<img src="${root}/resources/images/exer.png" />
 								<div class="collection-box-info">
 									<span class="collection-box-name">
-										2018년 약속 운동
+										2018년 약속 운동!!!!
 									</span>
 								</div>
 							</a>
 							
 						</div>
-					</c:forEach>
 				</div>
-			</section>
+			</div>
 	</article>

@@ -32,7 +32,9 @@ a:active{
 
 /* ----------my style cascade------------- */
 .hidden{
-	display: none;
+	visibility: hidden;
+	height: 0px;
+	overflow: hidden;
 }
 /* ----------header------------- */
 .header{

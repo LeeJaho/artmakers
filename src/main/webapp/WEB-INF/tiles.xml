@@ -21,7 +21,9 @@
     <put-attribute name="main" value="/WEB-INF/views/note/{1}.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/inc/footer.jsp" />
   </definition>
-  
+
+  <definition name="member.collection.mylike-partial" template="/WEB-INF/views/member/collection/mylike-partial.jsp"/>
+  <definition name="member.collection.myday-partial" template="/WEB-INF/views/member/collection/myday-partial.jsp"/>
    <definition name="member.*.*" template="/WEB-INF/views/inc/layout.jsp">
     <put-attribute name="header" value="/WEB-INF/views/inc/header.jsp" />
     <put-attribute name="aside" value="/WEB-INF/views/inc/aside.jsp" />

@@ -3,6 +3,7 @@ package com.artmakers.controller.member;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 
@@ -17,13 +18,22 @@ public class CollectionController {
 		return "member.collection.myday";
 	}
 	
-	@GetMapping("mylike")
-	public String mylike() {
+	@GetMapping("mylike-partial")
+	public String mylikePartial() {
 		
 		//Note note = service.getNote(id);
 		
 		//model.addAttribute("note", note);
-		return "member.collection.mylike";
+		return "member.collection.mylike-partial";
+	}
+	
+	@GetMapping("myday-partial")
+	public String mydayPartial() {
+		
+		//Note note = service.getNote(id);
+		
+		//model.addAttribute("note", note);
+		return "member.collection.myday-partial";
 	}
 
 
