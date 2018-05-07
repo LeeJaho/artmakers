@@ -3,42 +3,58 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!-- 절대경로를 쓰기 위해서 -> 왜 절대경로를 써? -->
 <c:set var="root" value="${pageContext.request.contextPath }" />
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <nav class="aside">
 	<h1></h1>
 	
 	<div class=aside-box>
 		
-		<div class="profile-wrap">	
-			<div class="profile-pic">
-				
+		<!-- authenticated 인증되었을 때-->
+		<sec:authorize access="isAuthenticated()">
+			<div class="profile-wrap">	
+				<div class="profile-pic">
+					
+				</div>
+				<div class="profile-name">
+					트깔
+				</div>
 			</div>
-			<div class="profile-name">
-				트깔
+		</sec:authorize>
+		
+		<!-- not authenticated -->
+		<sec:authorize access="!isAuthenticated()">
+			<div class="profile-wrap">	
+				<p>로그인 정보가 필요합니다.</p>
 			</div>
-		</div>
-		<a href="${root}/home/index">
-			<div class="aside-button home-wrap">
+		</sec:authorize>
+		
+		<div class="aside-button home-wrap">
+			<a href="${root}/home/index">
 				데이메이커스 홈
-			</div>
-		</a>
+			</a>
+		</div>
 		
-		<a href="${root}/member/note/list">
-			<div class="aside-button feed-wrap">
+		
+		<div class="aside-button feed-wrap">
+			<a href="${root}/member/note/list">
 				피드
-			</div>
-		</a>
+			</a>
+		</div>
 		
-		<a href="${root}/member/collection/myday">
-			<div class="aside-button myday-wrap">
-				내 Day
-			</div>
-		</a>
 		
-		<a href="">
-			<div class="aside-button mycollection-wrap">
+		
+		<div class="aside-button myday-wrap">
+				<a href="${root}/member/collection/myday">
+					내 Day
+				</a>
+		</div>
+		
+		
+		<div class="aside-button mycollection-wrap">
+				<a href="">
 				내 collection
-			</div>
-		</a>
+				</a>
+		</div>
 		
 		
 		<div class="login-wrap">

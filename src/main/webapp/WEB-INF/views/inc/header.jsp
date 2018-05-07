@@ -7,7 +7,7 @@
 		<nav class="main-menu">
 				<ul>
 					<li id="ham-button"><a href=""><img id="hamburg" src ="${root}/resources/images/downbutton.png"/></a></li>
-					<li><a href="${root}/home/index"><img src ="${root}/resources/images/daymakers-logo.png"/></a></li>
+					<li id ="logo"><a href="${root}/home/index"><img src ="${root}/resources/images/logo.png"/></a></li>
 					<li><a href="${root}/member/daywrite"><img src ="${root}/resources/images/write-icon.png"/></a></li>
 					<li><a href=""><img src ="${root}/resources/images/search_icon.png"/></a></li>
 				</ul>

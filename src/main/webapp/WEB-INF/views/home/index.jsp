@@ -6,23 +6,27 @@
 
 <main class="main">
 	<div class="main-visual">
-		<h2>하루를 만들어내는 Daymakers</h2>
+		<!-- <h2>하루를 만들어내는 Daymakers</h2>
 		<p>
 			과정을 기록하고</br> 기록을 통해 하루를 완성해보세요.</br> 모이면 ~~~~가 됩니다.
 		</p>
 		<a href="#">
 			<div class="visual-info">
-				<!-- <div class="content-day">
-									Day7
-								</div>
-								
-								<div class="content-name">
-									수제책상만들기
-								</div> -->
+				
 			</div>
-		</a>
+		</a> -->
+		<img src="${root}/resources/images/visual.png"/>
 	</div>
-
+	
+	
+	
+	
+	<section class="note-list-intro">
+		<p>
+		<h3>하루 하루 쌓아간 <br>
+		다양한 이야기를 확인해보세요</h3>
+		</p>
+	</section>
 	<section class="note-list">
 		<h1 class="hidden">메인</h1>
 

@@ -102,6 +102,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   </dependencies>
   
  <properties>
+  <failOnMissingWebXml>false</failOnMissingWebXml>
    <maven.compiler.source>1.8</maven.compiler.source>
    <maven.compiler.target>1.8</maven.compiler.target>
    <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>

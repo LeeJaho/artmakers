@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+ 
 /*-----reset----*/
 html{
 	height: 100%;
@@ -9,7 +11,7 @@ body{
 	margin: 0px;
 	height: 100%;
 	margin:0px;
-	font-family: 맑은 고딕, 고딕, 돋움, Arial, sans-serif !important;
+	font-family: 'Noto Sans KR', 맑은 고딕, 고딕, 돋움, Arial, sans-serif !important;
 	font-weight: bold !important;
 	color : #333333;
 }
@@ -58,7 +60,16 @@ a:active{
 	.main-menu li:nth-child(2){
 		margin-right:auto;
 		margin-left:auto;
+		width: 200px;
 	}
+	
+		#logo > a,
+		#logo img{
+			width: 150px;
+			
+		}
+	
+		
 	/* ------------main-menu--------------------------------------- */
 	.main-menu{
 		position: relative;
@@ -80,7 +91,9 @@ a:active{
 		}
 /* ------------.main-visual--------------------------------------- */		
 .main-visual{
-	margin: 10px 20px;
+	margin: 10px 10px;
+	/* background: #57BC90;
+	color: white; */
 }
 	.main-visual img{
 		
@@ -94,6 +107,12 @@ a:active{
 		.visual-info{
 		
 		}
+		
+/* ------------.note-list-intro--------------------------------------- */
+.note-list-intro{
+	
+	text-align: center;
+}
 /* ------------.main--------------------------------------- */		
 .main{
 	margin-top: 55px;
@@ -237,7 +256,8 @@ a:active{
 	margin-top: 20px;
 	display: flex;
 	justify-content: center;
-	background: #bcb8bc;
+	background: #A5A5AF;
+	
 	
 }
 .footer-table{
@@ -337,7 +357,15 @@ a:active{
 		border: 1px solid #bdbdbd;
 		margin-bottom: 5px;
 		height: 55px;
-	}		
+	}
+		
+		.aside-button > a{
+			display: block;
+			height: 20px;
+			line-height: 20px;
+			padding: 14px 0px;
+			border-bottom: solid 1px #dfdfdf;
+		}
 	
 	
 /*-------------summer note -----------------*/
