@@ -56,21 +56,31 @@
 				</a>
 		</div>
 		
+		<!-- not authenticated -->
+		<sec:authorize access="!isAuthenticated()">
+			<div class="login-wrap">
+				<div class="aside-button login-box">
+					<div class="login">
+						<a href="${root}/home/login">로그인</a>
+					</div>
+					<div class="hidden">
+						<a href="${root}/logout">로그아웃</a>
+					</div>
 		
-		<div class="login-wrap">
-			<div class="aside-button login-box">
-				<div>
-					<a href="${root}/home/login">로그인</a>
-				</div>
-				<div class="hidden">
-					<a href="${root}/logout">로그아웃</a>
-				</div>
-	
-				<div>
-					<a href="${root}/home/join">회원가입</a>
+					<div class="regist">
+						<a href="${root}/home/join">회원가입</a>
+					</div>
 				</div>
 			</div>
-	
-		</div>
+		</sec:authorize>
+		
+		<!-- authenticated 인증되었을 때-->
+		<sec:authorize access="isAuthenticated()">
+			<div class="login-wrap">
+					<div class="hidden">
+						<a href="${root}/logout">로그아웃</a>
+					</div>
+			</div>
+		</sec:authorize>
 	</div>
 </nav>

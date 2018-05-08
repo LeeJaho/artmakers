@@ -3,9 +3,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="root" value="${pageContext.request.contextPath }" />
 <link href = "${root}/resources/CSS/collection.css" type="text/css" rel="stylesheet"/>
-
-	
-				<div class="mylike">
+<div class="mylike">
+			<section class="collection-main-wrapper">
+					<div class="collection-main-header">
+						<div class="collection-main-img"><img src="${root}/resources/images/liked.png" /></div>
+						<p class="collection-category">LIKED DAY</p>
+						<p>트깔님의 목표로 정한 DAY가 총 0개 있습니다.</p>
+						<div class="collection-sort"><span>등록순</span> <span>DAY일 순</span></div>
+					</div>
+					
+				</section>
+				
+				<div class="mylike-content">
 					<c:forEach begin="0" end ="9">
 						<div class="collection-box">
 							<a href="">
@@ -20,4 +29,4 @@
 						</div>
 					</c:forEach>
 				</div>
-
+</div>

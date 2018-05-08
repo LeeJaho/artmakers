@@ -6,10 +6,10 @@
 	<header class="header">
 		<nav class="main-menu">
 				<ul>
-					<li id="ham-button"><a href=""><img id="hamburg" src ="${root}/resources/images/downbutton.png"/></a></li>
+					<li id="ham-button"><a href=""><img id="hamburg" src ="${root}/resources/images/menu.png"/></a></li>
 					<li id ="logo"><a href="${root}/home/index"><img src ="${root}/resources/images/logo.png"/></a></li>
-					<li><a href="${root}/member/daywrite"><img src ="${root}/resources/images/write-icon.png"/></a></li>
-					<li><a href=""><img src ="${root}/resources/images/search_icon.png"/></a></li>
+					<li><a href="${root}/member/daywrite"><img src ="${root}/resources/images/write.png"/></a></li>
+					<li><a href=""><img src ="${root}/resources/images/search.png"/></a></li>
 				</ul>
 		</nav>
 	</header>
@@ -22,7 +22,7 @@
 			hamButton.onclick=function(e){
 				if(aside.classList.contains("show")){
 					aside.classList.remove("show");
-					hamburg.src = "${root}/resources/images/downbutton.png";
+					hamburg.src = "${root}/resources/images/menu.png";
 				}
 				else{
 					aside.classList.add("show");

@@ -23,8 +23,8 @@
 	
 	<section class="note-list-intro">
 		<p>
-		<h3>하루 하루 쌓아간 <br>
-		다양한 이야기를 확인해보세요</h3>
+		<h3>인기글을 <br>
+		확인해보세요</h3>
 		</p>
 	</section>
 	<section class="note-list">
@@ -93,7 +93,12 @@
 				</li>
 				</a>
 				
-				
+				<section class="note-list-intro">
+					<p>
+					<h3>하루 하루 쌓아간 <br>
+					다양한 이야기를 확인해보세요</h3>
+					</p>
+				</section>
 				<a href="#">
 				<li class="content-box index-box">
 					<div class="content-img">

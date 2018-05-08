@@ -9,6 +9,7 @@
 	$(function(){
 		var collectionButton = $(".collection-nav");
 		var testBox = $(".test");
+		var collectionWrapper = $(".collection-main-wrapper");
 		collectionButton.click(function(e){
 			if(e.target === e.currentTarget)
 				return;
@@ -40,58 +41,62 @@
          	}
 			
 			testBox.children("div").addClass("hidden");
-			
+			//testBox.children("section").addClass("hidden");
 			view.removeClass("hidden");
-			
+			//collectionWrapper.removeClass("hidden");
 		});
 	});
 </script>
 	<article class="main">
-			<div class="collection-info">
-				<div class="collection-header"> 
-					<span class="collection-header-nick">트깔</span>
-					<span class="collection-header-id">jaho45245</span>
-					<p class="collection-header-intro">"제발 운동을 하고자 DAYMAKERS를 시작합니다"</p>
-				</div>
-				
-				<div class="collection-heart-img">
-					<div class="heart-icon-wrapper"><img src="${root}/resources/images/heart-icon.png" /></div>
+		<div class="collection-info">
+			<div class="collection-header">
+				<span class="collection-header-nick">트깔</span> <span
+					class="collection-header-id">jaho45245</span>
+				<p class="collection-header-intro">"제발 운동을 하고자 DAYMAKERS를 시작합니다"</p>
+			</div>
+	
+			<div class="collection-heart-img">
+				<div class="heart-icon-wrapper">
+					<img src="${root}/resources/images/heart-icon.png" />
 				</div>
 			</div>
-			
-			<nav class="collection-nav">
-				<div class="collection-nav-daymaking" data-view-name="myday">
-					<a href="">MAKING DAY</a>
-				</div>
-				
-				<div class="collection-nav-makedday" data-view-name="mylike" >
-					<a href="">LIKED DAY</a>
-				</div>
-			</nav>
-			
-			<section class="collection-main-wrapper">
+		</div>
+	
+		<nav class="collection-nav">
+			<div class="collection-nav-daymaking" data-view-name="myday">
+				<a href="">MAKING DAY</a>
+			</div>
+	
+			<div class="collection-nav-makedday" data-view-name="mylike">
+				<a href="">LIKED DAY</a>
+			</div>
+		</nav>
+
+		<div class="test">
+			<div class="collection-main-wrapper">
 				<div class="collection-main-header">
-					<div class="collection-main-img"><img src="${root}/resources/images/makingday-icon.png" /></div>
+					<div class="collection-main-img">
+						<img src="${root}/resources/images/makingday-icon.png" />
+					</div>
 					<p class="collection-category">MAKING DAY</p>
 					<p>트깔님의 진행중인 DAY가 총 0개 있습니다.</p>
-					<div class="collection-sort"><span>등록순</span> <span>DAY일 순</span></div>
+					<div class="collection-sort">
+						<span>등록순</span> <span>DAY일 순</span>
+					</div>
 				</div>
-				
-			</section>
-			
-			<div class="test">
-				<div class="myday">
-						<div class="collection-box">
-							<a href="">
-								<img src="${root}/resources/images/exer.png" />
-								<div class="collection-box-info">
-									<span class="collection-box-name">
-										2018년 약속 운동!!!!
-									</span>
-								</div>
-							</a>
-							
+	
+			</div>
+	
+	
+			<div class="myday-content">
+				<div class="collection-box">
+					<a href=""> <img src="${root}/resources/images/exer.png" />
+						<div class="collection-box-info">
+							<span class="collection-box-name"> 2018년 약속 운동!!!! </span>
 						</div>
+					</a>
+	
 				</div>
 			</div>
-	</article>
+		</div>
+</article>
