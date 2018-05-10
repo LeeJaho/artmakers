@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @RequestMapping("/member/collection/")
-@Controller("memberCollectionController")
+@Controller("MemberCollectionController")
 public class CollectionController {
 	
 	@RequestMapping("myday")

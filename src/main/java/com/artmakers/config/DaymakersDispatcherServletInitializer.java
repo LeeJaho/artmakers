@@ -6,23 +6,25 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class DaymakersDispatcherServletInitializer 
-	extends AbstractAnnotationConfigDispatcherServletInitializer {
+		extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 
 		return new Class[] {
-				DaymakersSecurityConfig.class
+				DaymakersSecurityConfig.class,
+				DaymakersHibernateConfig.class
 		};
 	}
-
+	
+	//servlet 관련된 것 넣기
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		
 		return new Class[] {
 				ServletContextConfig.class,
-				TilesConfig.class,
-				DaymakersMvcConfigurer.class
+				DaymakersMvcConfigurer.class,
+				TilesConfig.class
 		};
 	}
 

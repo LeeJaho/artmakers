@@ -1,6 +1,6 @@
 package com.artmakers.service;
 
-public class HomeService {
+public class NoteService {
 	
 	
 }

@@ -1,6 +1,8 @@
 package com.artmakers.config;
 
-import javax.activation.DataSource;
+
+
+import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -21,34 +23,35 @@ public class DaymakersSecurityConfig extends WebSecurityConfigurerAdapter{
 	/*@Autowired
 	private DataSource dataSource;*/
 	
-	/*@Autowired
-	private AuthenticationSuccessHandler successHandler;*/
+	@Autowired
+	private AuthenticationSuccessHandler successHandler;
 	
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		/*http
+		http
 			.csrf().disable()
-			.authorizeRequests()
+		.authorizeRequests()
 			.antMatchers("/member/**").hasRole("MEMBER")
 			.and()
 		.formLogin()
-			.loginPage("/home/login")
+			.loginPage("/member/login")//get
 			.successHandler(successHandler)
-			.loginProcessingUrl("/home/login")
+			.loginProcessingUrl("/member/login")//post
 			.permitAll()
 			.and()
 		.logout()
 			.logoutSuccessUrl("/home/index")
-			.invalidateHttpSession(true);*/
+			.invalidateHttpSession(true);
 	}
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		//UserBuilder users = User.withDefaultPasswordEncoder();
-				/*UserBuilder users = User.builder();
+				UserBuilder users = User.builder();
 				
 				auth.inMemoryAuthentication()
 					.withUser(users.username("jaho").password("{noop}111").roles("MEMBER"))
-					.withUser(users.username("jungsoo").password("{noop}122").roles("MEMBER"));*/
+					.withUser(users.username("jungsoo").password("{noop}111").roles("MEMBER"));
 	}
 }
