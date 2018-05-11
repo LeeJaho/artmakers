@@ -37,7 +37,7 @@
 				</div>
 			</div>
 			<section class="note-detail-wrapper">
-				<c:forEach begin="0" end ="9">
+				<%-- <c:forEach begin="0" end ="9"> --%>
 					<div class="note-detail-content">
 						<div class="note-detail-title">
 							<h2>Day1</h2>
@@ -52,15 +52,62 @@
 							<p>운동했을까요 안했을까요~~!~!~!!!~~~!</p>
 						</div>
 					</div>
-				</c:forEach>
+				<%-- </c:forEach> --%>
 			</section>
-				<!-- <div>
-					<h1>5. CPU의 기능</h1>	
-					<span>컴퓨터 프로그래밍</span><br>
-					<span>newlec</span>  <span>2018.03.14.15:36</span>
+			
+			<section class="note-detail-wrapper">
+				<%-- <c:forEach begin="0" end ="9"> --%>
+					<div class="note-detail-content">
+						<div class="note-detail-title">
+							<h2>Day2</h2>
+							<div>운동 처음 시작한 모습입니다.</div>
+						</div>
+						<div class="note-detail-img">
+							<img src="${root}/resources/images/detail-exer.png" />
+						</div>
+						<div class="detail-write">
+							<p>오랜만에 운동하니까 힘드네요 ㅎ히ㅡ희흐히희희흐히ㅡ하흐ㅏㅣㅎ하ㅣ허하ㅣ허ㅏㅣ</p>
+							<p>전 진짜로 운동 안했어요 으아하하앟아항하앟앟아</p>
+							<p>운동했을까요 안했을까요~~!~!~!!!~~~!</p>
+						</div>
+					</div>
+				<%-- </c:forEach> --%>
+			</section>
+			
+			
+			<section class="detail-author-info">
+				<div class="profile-pic">사진</div>
+				<span>트깔</span>
+				<p>"제발 운동을 하고자 DAYMAKERS를 시작합니다"</p>
+				<div class="heart-icon-wrapper">
+					<img src="${root}/resources/images/heart-icon.png" />
 				</div>
+			</section>
+			
+			
+			<!-- 회원이 보는 note detail / 로그인 필요X -->
+			<section class="comment-box">
+				<div><span>댓글 0개</span></div>
+				<ul>
+					<li class="comment-content-wrapper">
+						<div class="comment-profile">
+							<img src="${root}/resources/images/comment-profile.png" />
+						</div>
+						
+						<div class="comment-content">
+							<div class="comment-id"><span>선호아이디아아이디</span></div>
+							<span class="comment-context">
+							운동이 하고 싶어지는 그런 글이네요 !!!!!
+							</span>
+						</div>
+					</li>
+				</ul>		
+				<form>
+						<div class="comment-profile">
+							<img src="${root}/resources/images/comment-profile.png" />
+						</div>
+					<textarea placeholder="댓글을 입력하세요."></textarea>
+				</form>
 				
-				<div>
-					content
-				</div> -->
+			</section>
 	</article>
