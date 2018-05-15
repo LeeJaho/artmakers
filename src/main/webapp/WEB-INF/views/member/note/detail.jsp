@@ -88,25 +88,28 @@
 			<!-- 회원이 보는 note detail / 로그인 필요X -->
 			<section class="comment-box">
 				<div><span>댓글 0개</span></div>
-				<ul>
-					<li class="comment-content-wrapper">
+					<ul>
+						<li class="comment-content-wrapper">
+							<div class="comment-profile">
+								<img src="${root}/resources/images/comment-profile.png" />
+							</div>
+							
+							<div class="comment-content">
+								<span>선호아이디아아이디</span>
+								<span>2018-04-03</span>
+								<span class="comment-context">
+								운동이 하고 싶어지는 그런 글이네요 !!!!!
+								</span>
+							</div>
+						</li>
+					</ul>		
+				<form class="after-login-comment">
 						<div class="comment-profile">
 							<img src="${root}/resources/images/comment-profile.png" />
+							<span>트깔</span>
 						</div>
-						
-						<div class="comment-content">
-							<div class="comment-id"><span>선호아이디아아이디</span></div>
-							<span class="comment-context">
-							운동이 하고 싶어지는 그런 글이네요 !!!!!
-							</span>
-						</div>
-					</li>
-				</ul>		
-				<form>
-						<div class="comment-profile">
-							<img src="${root}/resources/images/comment-profile.png" />
-						</div>
-					<textarea placeholder="댓글을 입력하세요."></textarea>
+						<textarea rows="30" cols="8" placeholder="댓글을 입력하세요."></textarea>
+						<input class="submit-button" type="submit" value="등록"/>
 				</form>
 				
 			</section>

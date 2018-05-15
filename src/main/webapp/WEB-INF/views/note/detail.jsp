@@ -90,9 +90,25 @@
 			
 			<!-- 비회원이 보는 note detail / 로그인 필요 -->
 			<section class="comment-box">
-				<div><span>댓글 0개</span></div>		
-				<form>
-					<a href="${root}/member/login">
+				<div><span>댓글 0개</span></div>
+				<ul>
+						<li class="comment-content-wrapper">
+							<div class="comment-profile">
+								<img src="${root}/resources/images/comment-profile.png" />
+							</div>
+							
+							<div class="comment-content">
+								<span>선호아이디아아이디</span>
+								<span>2018-04-03</span>
+								<span class="comment-context">
+								운동이 하고 싶어지는 그런 글이네요 !!!!!
+								</span>
+							</div>
+						</li>
+					</ul>			
+				<form class="unlogin-comment-box">
+				<!-- 지금 보고 있는 페이지로 가야댐 -->
+					<a href="${root}/member/note/detail">
 						<span>로그인하고 댓글을 남겨보세요</span>
 					</a>
 				</form>

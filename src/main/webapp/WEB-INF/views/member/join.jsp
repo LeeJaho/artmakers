@@ -9,7 +9,7 @@
 			<div class="inner">
 				<h1>회원가입</h1>
 				<div class="inner-regist">
-				 	<form action="${root}/member/join" method="post">
+				 	<form action="${root}/member/join" method="post" enctype="multipart/form-data">
 					 	<ul>
 					 		<li>
 					 			<label class="input-label">이메일(아이디)</label>
@@ -24,16 +24,15 @@
 					 		<li>
 					 			<label class="input-label">비밀번호</label>
 					 			<p><input class="input-box" type="password" name="pwd" placeholder="비밀번호"/></p>
-					 		</li>
-					 		
-					 		<li>
-					 			<label class="input-label">비밀번호 확인</label>
 					 			<p><input class="input-box" type="password" name="pwd" placeholder="비밀번호 재입력"/></p>
 					 		</li>
 					 		
 					 		<li>
 					 			<label class="input-label">프로필 사진</label>
-					 			<p><input class="input-box" type="file" name="photo" placeholder="닉네임"/></p>
+					 			<div class="photo-input">
+						 			<p><input class="input-box" type="file" name="file"/></p>
+						 			<div class="join-profile"></div>
+					 			</div>
 					 		</li>
 					 		
 					 		<li>
@@ -46,3 +45,13 @@
 			</div>
 		</section>
 	</main>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+		    
+		    var okButton = $("#ex1 .btn-default");
+		    okButton.val("호호호");
+		});
+	
+	</script>

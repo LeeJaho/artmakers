@@ -335,7 +335,7 @@ a:active{
 }
 	.login-wrap .login-box{
 		display: flex;
-		/* justify-content: space-between; */
+		justify-content: space-around;
 	}
 		.login,
 		.regist{

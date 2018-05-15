@@ -12,7 +12,7 @@
 			<%-- 	<c:forEach begin="0" end ="9"> --%>
 					<li class="note-content-box">
 						<div class="note-list-left">
-							<a href="${root}/note/detail">
+							<a href="${root}/member/note/detail">
 								<span class="note-list-title">맨손 운동으로 인한 변화</span>
 								<p class="note-list-content">
 								  아무 생각없이 운동을 하곤 했지만 제대로 운동

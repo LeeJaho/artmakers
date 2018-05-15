@@ -12,17 +12,19 @@ public class Member {
 	private String pwd;
 	private String nickname;
 	private String photo;
+	private String role;
 	
 	public Member() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Member(String id, String pwd, String nickname, String photo) {
+	public Member(String id, String pwd, String nickname, String photo, String role) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
 		this.nickname = nickname;
 		this.photo = photo;
+		this.role = role;
 	}
 
 	public String getId() {
@@ -57,10 +59,21 @@ public class Member {
 		this.photo = photo;
 	}
 
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", pwd=" + pwd + ", nickname=" + nickname + ", photo=" + photo + "]";
+		return "Member [id=" + id + ", pwd=" + pwd + ", nickname=" + nickname + ", photo=" + photo + ", role=" + role
+				+ "]";
 	}
+	
+	
 	
 	
 }

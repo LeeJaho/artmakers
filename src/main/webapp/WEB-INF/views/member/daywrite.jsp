@@ -16,9 +16,13 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
 
 <main class="main">
-	<p class="write-content-wrapper"><input class="title-write-box" type="text" name="title" placeholder="제목"/></p>
-	<div id="summernote">Hello Summernote</div>
-	<p class="write-content-wrapper"><input class="submit-button" name="daywrite-submit" type="submit" value="등록"> </p>
+	
+	<form method="post">
+	  <p class="write-content-wrapper"><input class="title-write-box" type="text" name="title" placeholder="제목"/></p>
+	  <textarea id="summernote" name="daywrite-content"></textarea>
+	  <p class="write-content-wrapper"><input class="submit-button" name="daywrite-submit" type="submit" value="등록"> </p>	
+	</form>
+	
 </main>
 
 <script>

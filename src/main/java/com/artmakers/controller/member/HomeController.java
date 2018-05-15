@@ -1,5 +1,13 @@
 package com.artmakers.controller.member;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -7,8 +15,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.artmakers.entity.Member;
 import com.artmakers.service.member.MemberService;
@@ -41,9 +49,54 @@ public class HomeController {
 		return "member.join";
 	}
 	
+	
 	@PostMapping("join")
 	@ResponseBody
-	public String join(Member member) {
+	public String join(MultipartFile file, Member member, HttpServletRequest request){
+		
+		 System.out.println(file);
+	      ServletContext ctx = request.getServletContext();
+	      System.out.println(ctx);
+	       String path = ctx.getRealPath("/resources/profile/"+member.getId()); //물리경로
+	       File filepath = new File(path);
+	       if(!filepath.exists())
+	          filepath.mkdir();
+	       
+	       System.out.println(path);
+	       System.out.println(filepath);
+	       
+	       
+	      if(!file.isEmpty()) {
+	         try {
+	            String fname = file.getOriginalFilename();  
+	            System.out.println(fname);
+	            member.setPhoto(path+"/"+fname);
+	            
+	            InputStream fis = file.getInputStream();
+	            
+	            FileOutputStream fos = new FileOutputStream(path + File.separator + fname); //File.separator 구분자 / \ 윈도우는 \ 유닉스는 / 니깐 둘중 골라주는놈 파일.세퍼레이톨
+	            
+	            byte[] buf = new byte[1024]; //버퍼 만들기
+	            
+	            int size = 0;
+	            
+	            while((size = fis.read(buf,0,1024)) != -1)
+	                  fos.write(buf,0,size);
+	            
+	            fis.read(buf, 0, 1024);
+	            
+	            fis.close();
+	            fos.close();
+	            
+	         } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	         }
+	      }
+	      
+	      System.out.println(member);
+
+	      
 		String pwd = member.getPwd();
 		PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String hashedPwd = passwordEncoder.encode(pwd);

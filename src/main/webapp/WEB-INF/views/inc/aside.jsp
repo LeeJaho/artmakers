@@ -63,9 +63,6 @@
 					<div class="login">
 						<a href="${root}/member/login">로그인</a>
 					</div>
-					<div class="hidden">
-						<a href="${root}/logout">로그아웃</a>
-					</div>
 		
 					<div class="regist">
 						<a href="${root}/member/join">회원가입</a>
@@ -77,7 +74,7 @@
 		<!-- authenticated 인증되었을 때-->
 		<sec:authorize access="isAuthenticated()">
 			<div class="login-wrap">
-					<div class="">
+					<div class="aside-button">
 						<a href="${root}/logout">로그아웃</a>
 					</div>
 			</div>

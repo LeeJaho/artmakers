@@ -91,22 +91,44 @@
 	
 }
 
-	.comment-box form{
+	.comment-box .unlogin-comment-box{
 		height: 100px;
 		border : 1px solid #d9d9d9;
 		margin-top: 10px;
 	}
 	
-		.after-login-comment > textarea{
-			height:100%;
-			width:100%;
+		.after-login-comment{
+			/* height: 150px; */
+			margin-top: 10px;
+		}
+		
+		.after-login-comment textarea{
+			height: 120px;
+			margin-top:5px;
+			width:90%;
 			resize: none; /* 사용자 임의 변경 불가 */
+			
+		}
+
+		.after-login-comment .submit-button{
+			height: 40px;
+			width: 60px;
+			background: black;
+			color: white;
+			border-radius: 25%;
+			margin-left: 80%;
 		}
 	
-	.comment-box form > a{
+	.comment-box .unlogin-comment-box > a{
 		display: block;
 		height: 100px;
 	}
+	
+	.comment-box .login-comment-box{
+		height: 100px;
+		margin-top: 10px;
+	}
+	
 /*---------------detail-author-info-------------------*/
 .detail-author-info{
 	width: 80%;
@@ -141,18 +163,17 @@
 	border-top: 1px solid #dfdfdf;
 	border-bottom: 1px solid #dfdfdf;
 	display: flex;
-	flex-wrap: wrap;
 }
 
-	.comment-content-wrapper .comment-profile{
+	/* .comment-content-wrapper  *//* .comment-profile > img{
 		height: 40px;
 		width: 40px;
 		border-radius: 50%;
-		/* background: blue; */
+		background: blue;
 		border: 1px solid black;
 		margin: 0px;
 		
-	}
+	} */
 	.comment-content-wrapper .comment-content{
 		padding-left: 5px;
 		width:100%;

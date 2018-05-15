@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.User.UserBuilder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @Configuration
@@ -20,8 +21,8 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 @ComponentScan(basePackages="com.artmakers.config")
 public class DaymakersSecurityConfig extends WebSecurityConfigurerAdapter{
 	
-	/*@Autowired
-	private DataSource dataSource;*/
+	@Autowired
+	private DataSource dataSource;
 	
 	@Autowired
 	private AuthenticationSuccessHandler successHandler;
@@ -32,7 +33,8 @@ public class DaymakersSecurityConfig extends WebSecurityConfigurerAdapter{
 		http
 			.csrf().disable()
 		.authorizeRequests()
-			.antMatchers("/member/**").hasRole("MEMBER")
+			.antMatchers("/member/join").anonymous()
+			.antMatchers("/member/**").hasRole("ROLE_MEMBER")
 			.and()
 		.formLogin()
 			.loginPage("/member/login")//get
@@ -50,8 +52,15 @@ public class DaymakersSecurityConfig extends WebSecurityConfigurerAdapter{
 		//UserBuilder users = User.withDefaultPasswordEncoder();
 				UserBuilder users = User.builder();
 				
-				auth.inMemoryAuthentication()
+				
+				auth
+				.jdbcAuthentication()
+				.dataSource(dataSource)
+				.usersByUsernameQuery("select id, pwd password, 1 enabled from Member where id=?")
+				.authoritiesByUsernameQuery("select memberId id, roleId authority from MemberRole where memberId=?")
+				.passwordEncoder(new BCryptPasswordEncoder());
+				/*auth.inMemoryAuthentication()
 					.withUser(users.username("jaho").password("{noop}111").roles("MEMBER"))
-					.withUser(users.username("jungsoo").password("{noop}111").roles("MEMBER"));
+					.withUser(users.username("jungsoo").password("{noop}111").roles("MEMBER"));*/
 	}
 }
