@@ -24,7 +24,7 @@
 					 		<li>
 					 			<label class="input-label">비밀번호</label>
 					 			<p><input class="input-box" type="password" name="pwd" placeholder="비밀번호"/></p>
-					 			<p><input class="input-box" type="password" name="pwd" placeholder="비밀번호 재입력"/></p>
+					 			<!-- <p><input class="input-box" type="password" name="pwd" placeholder="비밀번호 재입력"/></p> -->
 					 		</li>
 					 		
 					 		<li>

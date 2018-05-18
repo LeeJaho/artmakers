@@ -54,7 +54,7 @@ public class DaymakersLoginSuccessHandler
 			}
 			
 			else {//직접 로그인을 요청한 경우
-				redirectStrategy.sendRedirect(request, response, "/home/index");
+				redirectStrategy.sendRedirect(request, response, "/member/index");
 				}
 				
 			}

@@ -13,10 +13,16 @@
 		<sec:authorize access="isAuthenticated()">
 			<div class="profile-wrap">	
 				<div class="profile-pic">
+					<c:if test="${member.photo == ''} ">
+						<img src="${root}/resources/images/comment-profile.png"/>
+					</c:if>
 					
+					<c:if test="${member.photo != null} ">
+						<img src="${root}${member.photo}" />
+					</c:if>
 				</div>
 				<div class="profile-name">
-					트깔
+					<span>${member.nickname}</span>
 				</div>
 			</div>
 		</sec:authorize>

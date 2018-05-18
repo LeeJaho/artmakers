@@ -27,4 +27,12 @@ public class HbMemberDao implements MemberDao {
 		return 1;
 	}
 
+	@Transactional
+	@Override
+	public Member get(String id) {
+		Session session = sessionFactory.getCurrentSession();
+		
+		return session.get(Member.class, id);
+	}
+
 }

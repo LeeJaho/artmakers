@@ -34,7 +34,8 @@ public class DaymakersSecurityConfig extends WebSecurityConfigurerAdapter{
 			.csrf().disable()
 		.authorizeRequests()
 			.antMatchers("/member/join").anonymous()
-			.antMatchers("/member/**").hasRole("ROLE_MEMBER")
+			.antMatchers("/member/login").anonymous()
+			.antMatchers("/member/**").hasRole("MEMBER")
 			.and()
 		.formLogin()
 			.loginPage("/member/login")//get
@@ -50,15 +51,16 @@ public class DaymakersSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		//UserBuilder users = User.withDefaultPasswordEncoder();
-				UserBuilder users = User.builder();
+				//UserBuilder users = User.builder();
 				
 				
 				auth
 				.jdbcAuthentication()
 				.dataSource(dataSource)
 				.usersByUsernameQuery("select id, pwd password, 1 enabled from Member where id=?")
-				.authoritiesByUsernameQuery("select memberId id, roleId authority from MemberRole where memberId=?")
+				.authoritiesByUsernameQuery("select id, role authority from Member where id=?")
 				.passwordEncoder(new BCryptPasswordEncoder());
+				
 				/*auth.inMemoryAuthentication()
 					.withUser(users.username("jaho").password("{noop}111").roles("MEMBER"))
 					.withUser(users.username("jungsoo").password("{noop}111").roles("MEMBER"));*/

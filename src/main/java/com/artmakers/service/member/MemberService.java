@@ -22,4 +22,13 @@ public class MemberService {
 		return result;
 	}
 
+
+	public Member getMember(String id) {
+		
+		Member member = memberDao.get(id);
+		return member;
+	}
+
+
+
 }

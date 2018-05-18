@@ -372,7 +372,16 @@ a:active{
 				width: 120px;
 				border-radius: 50%;
 				/* background: blue; */
-				border: 1px solid black;
+				border: 1px solid #cecece;
+				
+			}
+			
+			.profile-wrap .profile-pic > img{
+				height: 120px;
+				width: 120px;
+				border-radius: 50%;
+				/* background: blue; */
+				/* border: 1px solid black; */
 				
 			}
 			

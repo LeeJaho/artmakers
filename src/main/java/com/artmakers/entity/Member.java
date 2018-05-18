@@ -1,5 +1,6 @@
 package com.artmakers.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -12,6 +13,8 @@ public class Member {
 	private String pwd;
 	private String nickname;
 	private String photo;
+	
+	@Column(insertable=false)
 	private String role;
 	
 	public Member() {
