@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="root" value="${pageContext.request.contextPath }" />
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <link href = "${root}/resources/CSS/collection.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
@@ -45,14 +46,44 @@
 			view.removeClass("hidden");
 			//collectionWrapper.removeClass("hidden");
 		});
+		
+		//newFolder 만들 때
+		
+	});
+	$(function(){
+	var newFolderButton = $(".collection-sort > input");
+	var newFolderBox = $(".new-folder-box");
+	
+	newFolderButton.click(function(evt){
+		if(newFolderBox.hasClass("show")){
+			newFolderBox.remove(".show");
+			
+		}
+		else{
+			newFolderBox.addClass("show");
+			
+		}
+		evt.preventDefault();
+		});
 	});
 </script>
 	<article class="main">
 		<div class="collection-info">
+			<div class="profile-pic">
+				<c:choose>
+					<c:when test="${member.photo ne null}">
+						<img src="${root}${member.photo}" />
+					</c:when>
+
+					<c:otherwise>
+						<img src="${root}/resources/images/comment-profile.png" />
+					</c:otherwise>
+				</c:choose>
+			</div>
 			<div class="collection-header">
-				<span class="collection-header-nick">트깔</span> <span
-					class="collection-header-id">jaho45245</span>
-				<p class="collection-header-intro">"제발 운동을 하고자 DAYMAKERS를 시작합니다"</p>
+				<span class="collection-header-nick">${member.nickname}</span> <span
+					class="collection-header-id">${member.id}</span>
+				<p class="collection-header-intro">"${member.intro}"</p>
 			</div>
 	
 			<div class="collection-heart-img">
@@ -79,8 +110,10 @@
 						<img src="${root}/resources/images/makingday-icon.png" />
 					</div>
 					<p class="collection-category">MAKING DAY</p>
-					<p>트깔님의 진행중인 DAY가 총 0개 있습니다.</p>
+					<p><span>${member.nickname}</span>님의 진행중인 DAY가 총 0개 있습니다.</p>
+					
 					<div class="collection-sort">
+						<input type="button" name="newfolder" value="새폴더"/>
 						<span>등록순</span> <span>DAY일 순</span>
 					</div>
 				</div>
@@ -98,5 +131,14 @@
 	
 				</div>
 			</div>
+		</div>
+		
+		<!-- hidden 해야 할 new-folder -->
+		<div class=new-folder-box>
+			<form action="${root}/member/collection/myday" method="post" enctype="multipart/form-data">
+				<p><label class="input-label">폴더명</label></p>
+				<p><input class="input-box" type="text" name="title" placeholder="폴더이름"/></p>		
+				<p><input class="submit-button" type="submit" value="추가"/></p>
+			</form>
 		</div>
 </article>

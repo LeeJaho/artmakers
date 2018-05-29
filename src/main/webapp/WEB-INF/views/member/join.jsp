@@ -36,6 +36,13 @@
 					 		</li>
 					 		
 					 		<li>
+					 			<label class="input-label">자기소개</label>
+					 			<div class="intro-input">
+						 			<textarea name="intro"></textarea>	
+					 			</div>
+					 		</li>
+					 		
+					 		<li>
 					 			<p><input class="submit-button" type="submit" value="가입"/></p>
 					 		</li>
 					 		

@@ -4,6 +4,7 @@
 <!-- 절대경로를 쓰기 위해서 -> 왜 절대경로를 써? -->
 <c:set var="root" value="${pageContext.request.contextPath }" />
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+
 <nav class="aside">
 	<h1></h1>
 	
@@ -13,13 +14,17 @@
 		<sec:authorize access="isAuthenticated()">
 			<div class="profile-wrap">	
 				<div class="profile-pic">
-					<c:if test="${member.photo == ''} ">
-						<img src="${root}/resources/images/comment-profile.png"/>
-					</c:if>
-					
-					<c:if test="${member.photo != null} ">
-						<img src="${root}${member.photo}" />
-					</c:if>
+
+					<c:choose>
+						<c:when test="${member.photo ne null}">
+							<img src="${root}${member.photo}" />
+						</c:when>
+
+						<c:otherwise>
+							<img src="${root}/resources/images/comment-profile.png" />
+						</c:otherwise>
+					</c:choose>
+
 				</div>
 				<div class="profile-name">
 					<span>${member.nickname}</span>
@@ -33,18 +38,37 @@
 				<p>로그인 정보가 필요합니다.</p>
 			</div>
 		</sec:authorize>
+			
 		
 		<div class="aside-button home-wrap">
-			<a href="${root}/home/index">
-				데이메이커스 홈
-			</a>
+			<sec:authorize access="isAuthenticated()">
+				<a href="${root}/member/home/index">
+					데이메이커스 홈
+				</a>
+			</sec:authorize>
+			
+			<sec:authorize access="!isAuthenticated()">
+				<a href="${root}/home/index">
+					데이메이커스 홈
+				</a>
+			</sec:authorize>
 		</div>
 		
 		
 		<div class="aside-button feed-wrap">
-			<a href="${root}/member/note/list">
-				피드
-			</a>
+			<!-- not authenticated -->
+			<sec:authorize access="!isAuthenticated()">
+				<a href="${root}/note/list">
+					피드
+				</a>
+			</sec:authorize>
+			<!-- authenticated 인증되었을 때-->
+			<sec:authorize access="isAuthenticated()">
+				<a href="${root}/member/note/list">
+					피드
+				</a>
+			</sec:authorize>
+			
 		</div>
 		
 		

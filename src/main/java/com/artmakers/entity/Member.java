@@ -13,6 +13,7 @@ public class Member {
 	private String pwd;
 	private String nickname;
 	private String photo;
+	private String intro;
 	
 	@Column(insertable=false)
 	private String role;
@@ -21,12 +22,13 @@ public class Member {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Member(String id, String pwd, String nickname, String photo, String role) {
+	public Member(String id, String pwd, String nickname, String photo, String intro, String role) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
 		this.nickname = nickname;
 		this.photo = photo;
+		this.intro = intro;
 		this.role = role;
 	}
 
@@ -62,6 +64,14 @@ public class Member {
 		this.photo = photo;
 	}
 
+	public String getIntro() {
+		return intro;
+	}
+
+	public void setIntro(String intro) {
+		this.intro = intro;
+	}
+
 	public String getRole() {
 		return role;
 	}
@@ -72,8 +82,8 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", pwd=" + pwd + ", nickname=" + nickname + ", photo=" + photo + ", role=" + role
-				+ "]";
+		return "Member [id=" + id + ", pwd=" + pwd + ", nickname=" + nickname + ", photo=" + photo + ", intro=" + intro
+				+ ", role=" + role + "]";
 	}
 	
 	

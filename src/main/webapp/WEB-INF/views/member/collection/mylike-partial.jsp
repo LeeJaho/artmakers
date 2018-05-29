@@ -8,8 +8,11 @@
 					<div class="collection-main-header">
 						<div class="collection-main-img"><img src="${root}/resources/images/liked.png" /></div>
 						<p class="collection-category">LIKED DAY</p>
-						<p>트깔님의 목표로 정한 DAY가 총 0개 있습니다.</p>
-						<div class="collection-sort"><span>등록순</span> <span>DAY일 순</span></div>
+						<p><span>${member.nickname}</span>님의 목표로 정한 DAY가 총 0개 있습니다.</p>
+						<div class="collection-sort">
+						<input type="button" name="newfolder" value="새폴더"/>
+						<span>등록순</span> <span>DAY일 순</span>
+						</div>
 					</div>
 					
 				</section>

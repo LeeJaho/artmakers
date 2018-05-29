@@ -17,9 +17,20 @@
 
 <main class="main">
 	
-	<form method="post">
-	  <p class="write-content-wrapper"><input class="title-write-box" type="text" name="title" placeholder="제목"/></p>
-	  <textarea id="summernote" name="daywrite-content"></textarea>
+	<form action="${root}/member/daywirte" method="post" enctype="multipart/form-data">
+	  <p class="write-content-wrapper">
+	  	<select name="folder">
+	  		<option value="" selected>--폴더선택--</option>
+	  		
+	  		<option value="folder">폴더1</option>
+	  	</select>
+	  	<label>Day</label>
+	  	<input name="day"/>
+	  </p>
+	  <p class="write-content-wrapper">
+	 	 <input class="title-write-box" type="text" name="title" placeholder="제목"/>
+	  </p>
+	  	<textarea id="summernote" name="content"></textarea>
 	  <p class="write-content-wrapper"><input class="submit-button" name="daywrite-submit" type="submit" value="등록"> </p>	
 	</form>
 	

@@ -54,5 +54,13 @@
 			width: 210px;
 		}
 	
+	.intro-input{
+		width: 280px;
+	}
+	
+	.intro-input > textarea{
+		width: 100%;
+		resize: none;
+	}
 	
 	

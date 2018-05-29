@@ -19,11 +19,23 @@
 	}
 
 		.collection-heart-img .heart-icon-wrapper img{
-			
 			width: 50px;
 			height: 50px;
 		}
-
+		.collection-info .profile-pic{
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			/* background: blue; */
+			margin: 0px;
+		}
+		
+			.collection-info .profile-pic > img{
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			}
+		
 /*---------collection nav ----------*/
 .collection-nav{
 	display: flex;
@@ -68,7 +80,7 @@
 
 		.collection-sort{
 			font-size: 12px;
-			margin-left: 70%;
+			margin-left: auto;
 		}
 	
 /*---------collection main content ----------*/	
@@ -111,3 +123,38 @@
 			.collection-box-name{
 				font-size: 12px;
 			}
+			
+			
+/*---------new-folder ----------*/
+.new-folder-box{
+	width: 80%;
+	/* height: 600px; */
+	background: #ffffff;
+	position: fixed;
+	/* top: 46px; */
+	left: -120%;
+	z-index: 600;
+	transition: 1s;
+	font-size: 18px;
+}
+	.new-folder-box > form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.new-folder-box .input-box{
+		height: 40px;
+		width: 100%;
+	}
+	
+	.new-folder-box .submit-button{
+		height: 40px;
+		width: 100%;
+	}
+
+.new-folder-box.show{
+	top: calc(50% - 0%);
+	left: calc(20px - 0%);
+	box-shadow: 5px 5px 30px #797979;
+}	

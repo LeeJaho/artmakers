@@ -33,7 +33,7 @@ public class DaymakersHibernateConfig {
 		dataSource.setUser("daymakers");
 		dataSource.setPassword("111");
 		dataSource.setMinPoolSize(5); 
-		dataSource.setMaxPoolSize(30);
+		dataSource.setMaxPoolSize(20);
 		dataSource.setMaxIdleTime(3000);
 		
 		return dataSource;
