@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Day {
@@ -14,11 +15,18 @@ public class Day {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
+	
 	private int dayfolderId;
+	
 	private String memberId;
+	
 	private int day;
 	private String title;
 	private String content;
+	
+	@Transient
+	private String folderName;
 	
 	@Column(insertable=false)
 	private int hit;
@@ -28,13 +36,13 @@ public class Day {
 	
 	@Column(insertable=false)
 	private Date regDate;
-	
+
 	public Day() {
 		// TODO Auto-generated constructor stub
 	}
-
-	public Day(int id, int dayfolderId, String memberId, int day, String title, String content, int hit, boolean secret,
-			Date regDate) {
+	
+	public Day(int id, int dayfolderId, String memberId, int day, String title, String content, String folderName,
+			int hit, boolean secret, Date regDate) {
 		super();
 		this.id = id;
 		this.dayfolderId = dayfolderId;
@@ -42,6 +50,7 @@ public class Day {
 		this.day = day;
 		this.title = title;
 		this.content = content;
+		this.folderName = folderName;
 		this.hit = hit;
 		this.secret = secret;
 		this.regDate = regDate;
@@ -95,6 +104,14 @@ public class Day {
 		this.content = content;
 	}
 
+	public String getFolderName() {
+		return folderName;
+	}
+
+	public void setFolderName(String folderName) {
+		this.folderName = folderName;
+	}
+
 	public int getHit() {
 		return hit;
 	}
@@ -122,7 +139,8 @@ public class Day {
 	@Override
 	public String toString() {
 		return "Day [id=" + id + ", dayfolderId=" + dayfolderId + ", memberId=" + memberId + ", day=" + day + ", title="
-				+ title + ", content=" + content + ", hit=" + hit + ", secret=" + secret + ", regDate=" + regDate + "]";
+				+ title + ", content=" + content + ", folderName=" + folderName + ", hit=" + hit + ", secret=" + secret
+				+ ", regDate=" + regDate + "]";
 	}
 	
 	

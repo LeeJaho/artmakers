@@ -13,4 +13,6 @@ public interface DayFolderDao {
 
 	List<Dayfolder> getList(String memberId);
 
+	int getFolderId(String memberId, String folderName);
+
 }

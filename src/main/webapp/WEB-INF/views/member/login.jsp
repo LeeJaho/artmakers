@@ -12,7 +12,7 @@
 					<form method="post">
 					
 						<p><input class="input-box" type="text" name="username" placeholder="아이디"/></p>
-						<p><input class="input-box" type="text" name="password" placeholder="비밀번호"/></p>
+						<p><input class="input-box" type="password" name="password" placeholder="비밀번호"/></p>
 						<p><input class="submit-button" type="submit" value="로그인"> </p>
 					</form>
 				</div>

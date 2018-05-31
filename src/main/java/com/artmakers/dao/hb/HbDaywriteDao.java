@@ -5,10 +5,12 @@ import javax.transaction.Transactional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.artmakers.dao.DayWriteDao;
 import com.artmakers.entity.Day;
 
+@Repository
 public class HbDaywriteDao implements DayWriteDao {
 
 	@Autowired

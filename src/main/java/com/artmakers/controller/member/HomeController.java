@@ -46,21 +46,30 @@ public class HomeController {
 	}
 	
 	@GetMapping("daywrite")
-	public String daywirte(Model model, Principal principal) {
+	public String daywrite(Model model, Principal principal) {
 		
 		String memberId = principal.getName();
-		List<Dayfolder> dayFolders = memberService.getFolderList(memberId);
-		
-
+		List<Dayfolder> dayfolders = memberService.getFolderList(memberId);
+		//System.out.println(dayfolders.size());
+		model.addAttribute("dayfolders", dayfolders);
 		return "member.daywrite";
 	}
 	
 	@PostMapping("daywrite")
-	public String daywirte(Principal principal, Day day) {
+	public String daywrite(Principal principal, Day day) {
 		String memberId = principal.getName();
+		String folderName = day.getFolderName();
+		int dayFolderId = memberService.getFolderId(memberId, folderName);
 		day.setMemberId(memberId);
+		day.setDayfolderId(dayFolderId);
 		
-		return "member.daywrite";
+		System.out.println("memberId : " + day.getMemberId());
+		System.out.println("dayFolderId : " + day.getDayfolderId());
+		System.out.println("content : " + day.getContent());
+		System.out.println("title : " + day.getTitle());
+		
+		int result = memberService.insertDay(day);
+		return "redirect:collection/myday";
 	}
 	
 	@GetMapping("login")

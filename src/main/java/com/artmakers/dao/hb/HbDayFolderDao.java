@@ -40,7 +40,23 @@ public class HbDayFolderDao implements DayFolderDao {
 										+ "order by regDate desc", Dayfolder.class)
 										.setParameter("id", memberId);
 		List<Dayfolder> list = query.getResultList();
+		
+		
 		return list;
+	}
+
+	@Override
+	@Transactional
+	public int getFolderId(String memberId, String folderName) {
+		Session session = sessionFactory.getCurrentSession();
+		List<Dayfolder> dayFolder = session.createQuery("from Dayfolder where memberId=:id "
+				+ "and title=:folderName order by regDate desc", Dayfolder.class)
+				.setParameter("id", memberId)
+				.setParameter("folderName", folderName)
+				.getResultList();
+		int dayFolderId = dayFolder.get(0).getId();
+		System.out.println(dayFolderId);
+		return dayFolderId;
 	}
 
 }
